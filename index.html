@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProggerMan - Side Scroller Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- World Map Screen -->
+        <div id="worldMap" class="screen">
+            <div class="world-header">
+                <h1>Circuit World</h1>
+                <div class="total-score">Total Score: <span id="totalScore">0</span></div>
+            </div>
+            <canvas id="worldCanvas" width="800" height="400"></canvas>
+            <div class="world-info">
+                <p>Click on a level to start. Complete levels to unlock the next!</p>
+            </div>
+        </div>
+        
+        <!-- Game Screen -->
+        <div id="gameScreen" class="screen hidden">
+            <div class="game-header">
+                <div class="level-info">Level <span id="currentLevel">1</span></div>
+                <div class="lives">Lives: <span id="lives-count">3</span></div>
+                <div class="score">Score: <span id="score">0</span></div>
+            </div>
+            <canvas id="gameCanvas" width="800" height="400"></canvas>
+            <div class="game-controls">
+                <p>Use Arrow Keys to move and jump</p>
+                <button id="musicToggleBtn">🔊 Music ON</button>
+                <button id="backToMapBtn">Back to World Map</button>
+            </div>
+        </div>
+        
+        <!-- Game Over Screen -->
+        <div id="gameOver" class="game-over hidden">
+            <h2>Game Over!</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <button id="playAgainBtn">Play Again</button>
+            <button id="backToMapBtn2">Back to World Map</button>
+        </div>
+        
+        <!-- Level Complete Screen -->
+        <div id="levelComplete" class="level-complete hidden">
+            <h2>Level Complete!</h2>
+            <p>Score: <span id="levelScore">0</span></p>
+            <button id="nextLevelBtn">Next Level</button>
+            <button id="backToMapBtn3">Back to World Map</button>
+        </div>
+    </div>
+    <script src="arcadeSound.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+}
+
+.game-container {
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.screen {
+    width: 100%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* World Map Styles */
+.world-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.world-header h1 {
+    color: #00ff41;
+    font-size: 28px;
+    text-shadow: 0 0 10px #00ff41;
+}
+
+.total-score {
+    color: #4ecdc4;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#worldCanvas {
+    border: 3px solid #00ff41;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.world-info {
+    text-align: center;
+    margin-top: 15px;
+    color: #b8b8b8;
+}
+
+/* Game Screen Styles */
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.level-info {
+    color: #00ff41;
+}
+
+.lives {
+    color: #ff6b6b;
+}
+
+.score {
+    color: #4ecdc4;
+}
+
+#gameCanvas {
+    border: 3px solid #4ecdc4;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #87CEEB 0%, #98D8C8 100%);
+    display: block;
+    margin: 0 auto;
+}
+
+.game-controls {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.game-controls p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #b8b8b8;
+}
+
+/* Button Styles */
+button {
+    background: #4ecdc4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+button:hover {
+    background: #45b7b8;
+    transform: translateY(-2px);
+}
+
+/* Modal Styles */
+.game-over, .level-complete {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    z-index: 1000;
+    min-width: 300px;
+}
+
+.game-over {
+    border: 3px solid #ff6b6b;
+}
+
+.level-complete {
+    border: 3px solid #00ff41;
+}
+
+.game-over h2 {
+    color: #ff6b6b;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.level-complete h2 {
+    color: #00ff41;
+    margin-bottom: 20px;
+    font-size: 32px;
+    text-shadow: 0 0 10px #00ff41;
+}
+
+.game-over p, .level-complete p {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
